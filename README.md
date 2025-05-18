@@ -3,14 +3,19 @@
 
 🧵 Founders
 Rebiya Ismail – Creative Lead & Product Designer
+
 Malaika Mushtaq & Pari Gull – Marketing & Sales Strategists
+
 Shumaila – Operations & Finance Manager
 
 🛍️ Business Type
 
 Handmade Jewelry, Aesthetic Stationery, and Customized Craft Accessories
+
 📍 Start Date & Location
+
 Launch Date: August 2025
+
 Location: Multan, Pakistan (Online-based)
 
 🌟 Executive Summary
