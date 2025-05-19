@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knot & Note - Business Plan</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        /* Home Section */
+        .home-section {
+            min-height: 100vh;
+            background: url('pics/gradient-abstract-wireframe-background_23-2149009903.avif') no-repeat center center/cover;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 0 2px 8px #0007;
+        }
+        .home-content {
+            background: rgba(0,0,0,0.60);
+            padding: 30px 50px;
+            border-radius: 20px;
+            max-width: 600px;
+            text-align: center;
+        }
+        .order-btn {
+            background: #ff0099;
+            background: linear-gradient(90deg, #ff0099 0%, #493240 100%);
+            color: #fff;
+            padding: 18px 50px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-top: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 16px #0005;
+            transition: background 0.3s;
+        }
+        .order-btn:hover {
+            background: linear-gradient(90deg, #493240 0%, #ff0099 100%);
+        }
+        /* Order Section */
+        .order-section {
+            display: none;
+            padding: 50px 10vw 50px 10vw;
+            background: url('pics/images (1).jpeg') no-repeat center center/cover;
+            min-height: 100vh;
+        }
+        .order-bg {
+            background: rgba(240,242,247,0.97);
+            padding: 30px 20px;
+            border-radius: 18px;
+        }
+        .forms-container {
+            display: flex;
+            flex-direction: column;
+            gap: 55px;
+        }
+        .form-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px #0001;
+            padding: 30px;
+        }
+        .form-content {
+            flex: 1 1 370px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            min-width: 260px;
+        }
+        .form-content label {
+            font-weight: 500;
+            margin-top: 6px;
+        }
+        .form-content input, 
+        .form-content select, 
+        .form-content textarea {
+            padding: 7px 10px;
+            border: 1px solid #bbb;
+            border-radius: 7px;
+            font-size: 1em;
+        }
+        .form-content textarea {
+            resize: vertical;
+        }
+        .form-content .btn-row {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .form-img {
+            flex: 1 1 230px;
+            min-width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .form-img img {
+            max-width: 230px;
+            max-height: 230px;
+            border-radius: 20px;
+            box-shadow: 0 2px 14px #0002;
+        }
+        .form-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #493240;
+        }
+        .submit-all-btn {
+            display: block;
+            margin: 40px auto 0 auto;
+            background: #ff0099;
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 25px;
+            padding: 15px 45px;
+            box-shadow: 0 4px 16px #0005;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .submit-all-btn:hover {
+            background: #493240;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 30px;
+            background: #493240;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 28px;
+            font-size: 1em;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 2px 10px #0003;
+            transition: background 0.2s;
+        }
+        .back-btn:hover {
+            background: #ff0099;
+        }
+        /* Submit page style */
+        .submit-section {
+            display: none;
+            min-height: 100vh;
+            background: rgba(240,242,247,0.97);
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .submit-section .submit-msg {
+            background: rgba(76, 43, 78, 0.07);
+            border-radius: 16px;
+            display: inline-block;
+            padding: 35px 45px;
+            box-shadow: 0 2px 8px #0002;
+            font-size: 1.3em;
+            color: #493240;
+            margin-bottom: 30px;
+        }
+        .submit-section .submit-actions {
+            margin-top: 25px;
+        }
+        .submit-section .submit-actions button {
+            margin: 0 15px;
+            background: #ff0099;
+            color: #fff;
+            font-size: 1em;
+            border: none;
+            border-radius: 20px;
+            padding: 12px 30px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .submit-section .submit-actions button:hover {
+            background: #493240;
+        }
+        @media (max-width: 920px) {
+            .forms-container {
+                padding: 0 15px;
+            }
+            .form-box {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .form-img {
+                margin-bottom: 15px;
+                justify-content: start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Home Section -->
+    <section class="home-section" id="home">
+        <div class="home-content">
+            <h1>Knot & Note</h1>
+            <p>
+                Welcome to <b>Knot & Note</b> – your destination for personalized thread pens, custom jewelry, beautiful envelopes, and unique gift packages. 
+                We offer a range of handcrafted, customizable products to make your gifts and memories extra special.
+            </p>
+            <button class="order-btn" onclick="showOrder()">Order Now</button>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section class="order-section" id="order">
+        <div class="order-bg">
+        <button class="back-btn" onclick="showHome()">&#8592; Back</button>
+        <h2 style="text-align:center; color:#493240;">Place Your Order</h2>
+        <form id="multiForm">
+        <div class="forms-container">
+            <!-- Customised Thread Pen Form -->
+            <div class="form-box">
+                <div class="form-content">
+                    <div class="form-title">Customized Thread Pen</div>
+                    <label>Choose color for covering pen:
+                        <input name="pen_cover_color" type="text">
+                    </label>
+                    <label>Choose color for naming:
+                        <input name="pen_name_color" type="text">
+                    </label>
+                    <label>Name (to be written):
+                        <input name="pen_name" type="text">
+                    </label>
+                    <label>Phone No:
+                        <input name="pen_phone" type="tel" pattern="[0-9+\-\s]{10,}">
+                    </label>
+                    <label>Address:
+                        <textarea name="pen_address"></textarea>
+                    </label>
+                    <label>Message (optional):
+                        <textarea name="pen_message"></textarea>
+                    </label>
+                    <label>Upload envelope pic you like (optional):
+                        <input name="pen_envelope_pic" type="file" accept="image/*">
+                    </label>
+                    <div class="btn-row">
+                        <button type="button" onclick="submitSingleForm('pen_', 'Customised Thread Pen')">Submit</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </div>
+                <div class="form-img">
+                    <img src="pics/WhatsApp Image 2025-05-15 at 21.51.13_1472dd76.jpg" alt="Thread Pen Sample">
+                </div>
+            </div>
+            <!-- Customised Jewellery Form -->
+            <div class="form-box">
+                <div class="form-content">
+                    <div class="form-title">Customized Jewellery</div>
+                    <label>Name (to be written):
+                        <input name="jewellery_name" type="text">
+                    </label>
+                    <label>Phone No:
+                        <input name="jewellery_phone" type="tel" pattern="[0-9+\-\s]{10,}">
+                    </label>
+                    <label>Choose: 
+                        <select name="jewellery_product_type">
+                            <option value="">--Select--</option>
+                            <option>Bracelet</option>
+                            <option>Jewellery</option>
+                        </select>
+                    </label>
+                    <label>Address:
+                        <textarea name="jewellery_address"></textarea>
+                    </label>
+                    <label>Message (optional):
+                        <textarea name="jewellery_message"></textarea>
+                    </label>
+                    <label>Upload envelope pic you like (optional):
+                        <input name="jewellery_envelope_pic" type="file" accept="image/*">
+                    </label>
+                    <div class="btn-row">
+                        <button type="button" onclick="submitSingleForm('jewellery_', 'Customised Jewellery')">Submit</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </div>
+                <div class="form-img">
+                    <img src="pics/il_570xN.5621646634_8hcm.webp" alt="Jewellery Sample">
+                </div>
+            </div>
+            <!-- Envelope Form -->
+            <div class="form-box">
+                <div class="form-content">
+                    <div class="form-title">Envelopes</div>
+                    <label>Name (to be written):
+                        <input name="envelope_name" type="text">
+                    </label>
+                    <label>Phone No:
+                        <input name="envelope_phone" type="tel" pattern="[0-9+\-\s]{10,}">
+                    </label>
+                    <label>Address:
+                        <textarea name="envelope_address"></textarea>
+                    </label>
+                    <label>Message (optional):
+                        <textarea name="envelope_message"></textarea>
+                    </label>
+                    <label>Upload envelope pic you like (optional):
+                        <input name="envelope_envelope_pic" type="file" accept="image/*">
+                    </label>
+                    <div class="btn-row">
+                        <button type="button" onclick="submitSingleForm('envelope_', 'Envelope')">Submit</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </div>
+                <div class="form-img">
+                    <img src="pics/images (6).jpeg" alt="Envelope Sample">
+                </div>
+            </div>
+            <!-- Customised Package Form -->
+            <div class="form-box">
+                <div class="form-content">
+                    <div class="form-title">Customized Package</div>
+                    <label>Name (to be written):
+                        <input name="package_name" type="text">
+                    </label>
+                    <label>Products (list):
+                        <input name="package_products" type="text">
+                    </label>
+                    <label>Phone No:
+                        <input name="package_phone" type="tel" pattern="[0-9+\-\s]{10,}">
+                    </label>
+                    <label>Address:
+                        <textarea name="package_address"></textarea>
+                    </label>
+                    <label>Message (optional):
+                        <textarea name="package_message"></textarea>
+                    </label>
+                    <div class="btn-row">
+                        <button type="button" onclick="submitSingleForm('package_', 'Customised Package')">Submit</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </div>
+                <div class="form-img">
+                    <img src="images (7).jpeg" alt="Package Sample">
+                </div>
+            </div>
+        </div>
+        <button class="submit-all-btn" type="button" onclick="showSubmitPage()">Submit All</button>
+        </form>
+        </div>
+    </section>
+
+    <!-- Submit Section -->
+    <section class="submit-section" id="submit-section">
+        <div class="submit-msg">
+            <div>Thank you for filling your order!</div>
+            <div style="margin:10px 0 0 0;">
+                <b>Would you like to fill another form or submit your order?</b>
+            </div>
+        </div>
+        <div class="submit-actions">
+            <button type="button" onclick="backToOrder()">Fill Another Form</button>
+            <button type="button" onclick="finalSubmit()">Submit Order</button>
+        </div>
+    </section>
+
+    <script>
+        // Show order section and hide home on clicking "Order Now"
+        function showOrder() {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('order').style.display = 'block';
+            document.getElementById('submit-section').style.display = 'none';
+            window.scrollTo(0, 0);
+        }
+        // Show home section and hide order on clicking "Back"
+        function showHome() {
+            document.getElementById('order').style.display = 'none';
+            document.getElementById('home').style.display = 'flex';
+            document.getElementById('submit-section').style.display = 'none';
+            window.scrollTo(0, 0);
+        }
+
+        function showSubmitPage() {
+            // Check if at least one form is filled
+            var form = document.getElementById('multiForm');
+            var formData = new FormData(form);
+            let filled = false;
+            // Check for any non-empty fields
+            for (let value of formData.values()) {
+                if (
+                    (value instanceof File && value.name) ||
+                    (typeof value === 'string' && value.trim() !== "")
+                ) {
+                    filled = true;
+                    break;
+                }
+            }
+            if (!filled) {
+                alert("Please fill at least one form before submitting!");
+                return;
+            }
+
+            document.getElementById('order').style.display = 'none';
+            document.getElementById('submit-section').style.display = 'block';
+            window.scrollTo(0, 0);
+        }
+
+        function backToOrder() {
+            document.getElementById('submit-section').style.display = 'none';
+            document.getElementById('order').style.display = 'block';
+            window.scrollTo(0, 0);
+        }
+
+        // Submit one form at a time
+        function submitSingleForm(prefix, orderType) {
+            var form = document.getElementById('multiForm');
+            var formData = new FormData(form);
+            var mailBody = "";
+            var fields = [];
+            var fileField = "";
+            if (prefix === "pen_") {
+                fields = [
+                    ["Cover Color", "cover_color"],
+                    ["Name Color", "name_color"],
+                    ["Name", "name"],
+                    ["Phone", "phone"],
+                    ["Address", "address"],
+                    ["Message", "message"]
+                ];
+                fileField = "envelope_pic";
+            } else if (prefix === "jewellery_") {
+                fields = [
+                    ["Name", "name"],
+                    ["Phone", "phone"],
+                    ["Product Type", "product_type"],
+                    ["Address", "address"],
+                    ["Message", "message"]
+                ];
+                fileField = "envelope_pic";
+            } else if (prefix === "envelope_") {
+                fields = [
+                    ["Name", "name"],
+                    ["Phone", "phone"],
+                    ["Address", "address"],
+                    ["Message", "message"]
+                ];
+                fileField = "envelope_pic";
+            } else if (prefix === "package_") {
+                fields = [
+                    ["Name", "name"],
+                    ["Products", "products"],
+                    ["Phone", "phone"],
+                    ["Address", "address"],
+                    ["Message", "message"]
+                ];
+                // no file for package
+            }
+            let sectionBody = "";
+            let hasSection = false;
+            for (let [label, name] of fields) {
+                let val = formData.get(prefix + name);
+                if (val && typeof val === 'string' && val.trim() !== "") {
+                    hasSection = true;
+                    sectionBody += `${label}: ${val.trim()}%0D%0A`;
+                }
+            }
+            if (hasSection) {
+                mailBody += `Order Type: ${orderType}%0D%0A${sectionBody}`;
+                // File upload info
+                if (fileField) {
+                    let file = formData.get(prefix + fileField);
+                    if (file && file.name) {
+                        mailBody += "(Envelope pic uploaded, please send via WhatsApp separately)%0D%0A";
+                    }
+                }
+                mailBody += "%0D%0A";
+            } else {
+                alert("Please fill this form before submitting!");
+                return;
+            }
+            let subject = encodeURIComponent(`New ${orderType} Order from Knot & Note`);
+            let mailto = `mailto:rshumaila316@gmail.com?subject=${subject}&body=${mailBody}`;
+            window.open(mailto);
+
+            alert("Thank you for your order! Your details have been prepared for email. Please send if your email client opens, or send envelope images via WhatsApp.");
+        }
+
+        // Submit all filled forms
+        function finalSubmit() {
+            var form = document.getElementById('multiForm');
+            var formData = new FormData(form);
+            var mailBody = "";
+            var orderTypes = [
+                {
+                    type: "Customised Thread Pen",
+                    prefix: "pen_",
+                    fields: [
+                        ["Cover Color", "cover_color"],
+                        ["Name Color", "name_color"],
+                        ["Name", "name"],
+                        ["Phone", "phone"],
+                        ["Address", "address"],
+                        ["Message", "message"]
+                    ],
+                    fileField: "envelope_pic"
+                },
+                {
+                    type: "Customised Jewellery",
+                    prefix: "jewellery_",
+                    fields: [
+                        ["Name", "name"],
+                        ["Phone", "phone"],
+                        ["Product Type", "product_type"],
+                        ["Address", "address"],
+                        ["Message", "message"]
+                    ],
+                    fileField: "envelope_pic"
+                },
+                {
+                    type: "Envelope",
+                    prefix: "envelope_",
+                    fields: [
+                        ["Name", "name"],
+                        ["Phone", "phone"],
+                        ["Address", "address"],
+                        ["Message", "message"]
+                    ],
+                    fileField: "envelope_pic"
+                },
+                {
+                    type: "Customised Package",
+                    prefix: "package_",
+                    fields: [
+                        ["Name", "name"],
+                        ["Products", "products"],
+                        ["Phone", "phone"],
+                        ["Address", "address"],
+                        ["Message", "message"]
+                    ]
+                }
+            ];
+
+            let anyFilled = false;
+            for (let ot of orderTypes) {
+                let sectionBody = "";
+                let hasSection = false;
+                for (let [label, name] of ot.fields) {
+                    let val = formData.get(ot.prefix + name);
+                    if (val && typeof val === 'string' && val.trim() !== "") {
+                        hasSection = true;
+                        sectionBody += `${label}: ${val.trim()}%0D%0A`;
+                    }
+                }
+                if (hasSection) {
+                    anyFilled = true;
+                    mailBody += `Order Type: ${ot.type}%0D%0A${sectionBody}`;
+                    // File upload info
+                    if (ot.fileField) {
+                        let file = formData.get(ot.prefix + ot.fileField);
+                        if (file && file.name) {
+                            mailBody += "(Envelope pic uploaded, please send via WhatsApp separately)%0D%0A";
+                        }
+                    }
+                    mailBody += "%0D%0A";
+                }
+            }
+
+            if (!anyFilled) {
+                alert("Please fill at least one form before submitting!");
+                backToOrder();
+                return;
+            }
+
+            let subject = encodeURIComponent("New Order from Knot & Note");
+            let mailto = `mailto:rshumaila316@gmail.com?subject=${subject}&body=${mailBody}`;
+            window.open(mailto);
+
+            setTimeout(() => { form.reset(); }, 300);
+            alert("Thank you for your order! Your details have been prepared for email. Please send if your email client opens, or send envelope images via WhatsApp.");
+            // Optionally go back to home
+            showHome();
+        }
+    </script>
+</body>
+</html>
